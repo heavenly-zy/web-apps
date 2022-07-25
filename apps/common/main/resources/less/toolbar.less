@@ -387,6 +387,20 @@
     }
 }
 
+.theme-dark {
+    .box-tabs{
+        border-bottom: @canvas-background 1px solid;
+        z-index: -1;
+    }
+    .toolbar .tabs li.active {
+        border: @canvas-background 1px solid;
+        border-bottom: none;
+        height: 30px;
+        z-index: 10;
+    }
+
+}
+
 .style-off-tabs {
     .toolbar {
         @underscore_height: 3px;
