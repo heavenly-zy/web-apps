@@ -388,17 +388,21 @@
 }
 
 .theme-dark {
-    .box-tabs{
-        border-bottom: @canvas-background 1px solid;
-        z-index: -1;
+    .box-controls{
+        border-top: @canvas-background 1px solid;
     }
-    .toolbar .tabs li.active {
-        border: @canvas-background 1px solid;
-        border-bottom: none;
-        height: 30px;
-        z-index: 10;
+    .toolbar .tabs {
+        overflow: visible;
+        ul {overflow: visible;}
+        li {
+            padding-bottom: 1px;
+            &.active {
+                border: @canvas-background 1px solid;
+                border-bottom: none;
+                height: 29px;
+            }
+        }
     }
-
 }
 
 .style-off-tabs {
