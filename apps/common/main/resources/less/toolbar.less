@@ -75,7 +75,7 @@
             display: inline-flex;
             align-items: center;
             height: 100%;
-
+            border-top: transparent 2px solid;
             &:hover {
                 background-color: @highlight-header-button-hover-ie;
                 background-color: @highlight-header-button-hover;
@@ -86,8 +86,7 @@
                 background-color: @background-toolbar;
                 border: @border-toolbar-active-panel-top 1px solid;
                 border-bottom: none;
-                position: relative;
-                top: 1px;
+                height: 29px;
             }
 
 
@@ -100,14 +99,14 @@
                 text-align: center;
                 color: @text-toolbar-header-ie;
                 color: @text-toolbar-header;
+                position: relative;
+                top: -1px;
             }
 
             &.active {
                 > a {
                     color: @text-normal-ie;
                     color: @text-normal;
-                    position: relative;
-                    top: -1px;
                 }
             }
         }
