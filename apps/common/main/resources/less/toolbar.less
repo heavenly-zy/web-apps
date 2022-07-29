@@ -58,7 +58,7 @@
         background-color: @header-background-color-ie;
         background-color: @header-background-color;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         display: flex;
         flex-shrink: 1;
 
@@ -66,7 +66,7 @@
             padding: 4px 0 0;
             margin: 0;
             white-space: nowrap;
-            overflow: hidden;
+            overflow: visible;
             list-style: none;
             font-size: 0;
         }
@@ -84,6 +84,11 @@
             &.active {
                 background-color: @background-toolbar-ie;
                 background-color: @background-toolbar;
+                border: @border-toolbar-active-panel-top 1px solid;
+                border-bottom: none;
+                height: 28px;
+                position: relative;
+                top: 1px;
             }
 
 
@@ -102,6 +107,8 @@
                 > a {
                     color: @text-normal-ie;
                     color: @text-normal;
+                    position: relative;
+                    top: -1px;
                 }
             }
         }
@@ -165,7 +172,7 @@
         //height: @height-controls;         // button has strange offset in IE when odd height
         padding: 7px 0;
         display: flex;
-
+        border-top: @border-toolbar-active-panel-top 1px solid;
         //background-color: #F2CBBF;
 
         .panel {
@@ -383,24 +390,6 @@
 
         .toolbar-mask {
             left: 0;
-        }
-    }
-}
-
-.theme-dark {
-    .box-controls{
-        border-top: @border-toolbar-active-panel-top 1px solid;
-    }
-    .toolbar .tabs {
-        overflow: visible;
-        ul {overflow: visible;}
-        li {
-            padding-bottom: 1px;
-            &.active {
-                border: @border-toolbar-active-panel-top 1px solid;
-                border-bottom: none;
-                height: 29px;
-            }
         }
     }
 }
