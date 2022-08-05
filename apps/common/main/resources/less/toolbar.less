@@ -439,8 +439,9 @@
                 }
 
                 &:hover:not(.active) {
-                    background-color: rgba(0, 0, 0, .05);
-                    //background-color: @highlight-button-hover;
+                    //background-color: rgba(0, 0, 0, .05);
+                    background-color: @highlight-button-hover-ie;
+                    background-color: @highlight-button-hover;
                 }
 
                 > a {
@@ -573,8 +574,8 @@
             color: @text-normal-ie;
             color: @text-normal;
             &:hover:not(:disabled),&:focus {
-                box-shadow: 0 0 0 1px @highlight-button-hover-ie;
-                box-shadow: 0 0 0 1px @highlight-button-hover;
+                box-shadow: 0 0 0 @scaled-one-px-value-ie @highlight-header-button-hover-ie;
+                box-shadow: 0 0 0 @scaled-one-px-value @highlight-header-button-hover;
             }
         }
 
