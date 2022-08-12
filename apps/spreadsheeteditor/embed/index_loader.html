@@ -233,7 +233,8 @@
 
           var params = getUrlParams(),
               lang = (params["lang"] || 'en').split(/[\-\_]/)[0],
-              customer = params["customer"] ? ('<div class="loader-page-text-customer">' + encodeUrlParam(params["customer"]) + '</div>') : '',
+              // customer = params["customer"] ? ('<div class="loader-page-text-customer">' + encodeUrlParam(params["customer"]) + '</div>') : '',
+              customer = params["customer"] ? ('<div class="loader-page-text-customer">' + '文档中心' + '</div>') : '',
               margin = (customer !== '') ? 50 : 20,
               loading = 'Loading...',
               logo = params["logo"] ? ((params["logo"] !== 'none') ? ('<img src="' + encodeUrlParam(params["logo"]) + '" class="loader-logo" />') : '') : null;
